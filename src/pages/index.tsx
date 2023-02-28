@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { Feature, Footer, Form, Header, Hero } from "../components"
+import { Feature, Footer, Form, Header, Hero, Screenshot } from "../components"
 import heroImage from '../images/hero.png';
 import feature1Image from '../images/feature1.png';
 import feature2Image from '../images/feature2.png';
@@ -8,15 +8,15 @@ import feature3Image from '../images/feature3.png';
 
 const IndexPage: React.FC<PageProps> = () => {
 
-  const headerTitle = "タイトル";
-  const heroHeadLine = "キャッチコピー";
-  const heroSentence = "ここにはリード文が入ります。";
-  const feature1Headline = "機能1";
-  const feature1Sentence = "ここには機能1の説明文が入ります。";
-  const feature2Headline = "機能2";
-  const feature2Sentence = "ここには機能2の説明文が入ります。";
-  const feature3Headline = "機能3";
-  const feature3Sentence = "ここには機能3の説明文が入ります。";
+  const headerTitle = "スマート在庫管理 on kintone";
+  const heroHeadLine = "IoTでkintoneをもっと便利に。在庫管理を自動化。";
+  const heroSentence = "IoT重量計とkintoneをつないで、在庫管理を自動化します。在庫量の変化がリアルタイムでkintoneアプリに入力されます。";
+  const feature1Headline = "在庫量の変化を自動で入力";
+  const feature1Sentence = "IoT重量計が在庫量の変化を検知して、kintoneに自動で入力を行います。1グラムの変化を検知することができます。";
+  const feature2Headline = "好きなアプリと組み合わせて使える";
+  const feature2Sentence = "在庫管理用のkintoneアプリは、お客様が自由に作成、編集することができます。";
+  const feature3Headline = "かんたんに導入できる";
+  const feature3Sentence = "kintoneアプリにプラグインを読み込むだけで、かんたんに機能を導入することができます。";
 
   return (
     <div className="flex justify-center mx-2 bg-gray-50">
@@ -31,6 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <Feature headline={feature2Headline} sentence={feature2Sentence} image={feature2Image}/>
             <Feature headline={feature3Headline} sentence={feature3Sentence} image={feature3Image}/>
           </div>
+          <Screenshot/>
           <Form/>
         </main>
         <footer>
@@ -43,4 +44,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Landing Page</title>
+export const Head: HeadFC = () => <title>スマート在庫管理 on kintone</title>
